@@ -14,7 +14,8 @@ class SuperiorTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        // Initialization codeeee
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
