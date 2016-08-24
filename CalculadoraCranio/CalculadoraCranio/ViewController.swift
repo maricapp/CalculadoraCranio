@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var messageReceived:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
