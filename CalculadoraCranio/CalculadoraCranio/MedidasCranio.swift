@@ -9,6 +9,7 @@
 import UIKit
 
 class MedidasCranio: NSObject {
+    //variaveis
     var med1_AngulodaConcavidadeFrontal: Float?
     var med2_ComprimentoMaximodoCranio: Float?
     var med3_LarguraMaximadoCranio_Bieurio: Float?
