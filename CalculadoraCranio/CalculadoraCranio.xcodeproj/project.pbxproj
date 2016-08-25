@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC29FC7F1D6E7601001BF5C0 /* MedidasCranio.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29FC7E1D6E7601001BF5C0 /* MedidasCranio.swift */; };
 		ACFCF5741D6E48EF00DA98D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCF5731D6E48EF00DA98D3 /* AppDelegate.swift */; };
 		ACFCF5761D6E48EF00DA98D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCF5751D6E48EF00DA98D3 /* ViewController.swift */; };
 		ACFCF5791D6E48EF00DA98D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFCF5771D6E48EF00DA98D3 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC29FC7E1D6E7601001BF5C0 /* MedidasCranio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedidasCranio.swift; sourceTree = "<group>"; };
 		ACFCF5701D6E48EF00DA98D3 /* CalculadoraCranio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculadoraCranio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCF5731D6E48EF00DA98D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACFCF5751D6E48EF00DA98D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		ACFCF5721D6E48EF00DA98D3 /* CalculadoraCranio */ = {
 			isa = PBXGroup;
 			children = (
+				AC29FC7E1D6E7601001BF5C0 /* MedidasCranio.swift */,
 				ACFCF5731D6E48EF00DA98D3 /* AppDelegate.swift */,
 				ACFCF5751D6E48EF00DA98D3 /* ViewController.swift */,
 				ACFCF5771D6E48EF00DA98D3 /* Main.storyboard */,
@@ -266,6 +269,7 @@
 				ACFCF5741D6E48EF00DA98D3 /* AppDelegate.swift in Sources */,
 				ACFCF5A41D6E5AC400DA98D3 /* SuperiorTableViewCell.swift in Sources */,
 				ACFCF5A21D6E557700DA98D3 /* SuperiorTableViewController.swift in Sources */,
+				AC29FC7F1D6E7601001BF5C0 /* MedidasCranio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +496,7 @@
 				ACFCF59A1D6E48EF00DA98D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACFCF59B1D6E48EF00DA98D3 /* Build configuration list for PBXNativeTarget "CalculadoraCranioTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +505,7 @@
 				ACFCF59D1D6E48EF00DA98D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACFCF59E1D6E48EF00DA98D3 /* Build configuration list for PBXNativeTarget "CalculadoraCranioUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +514,7 @@
 				ACFCF5A01D6E48EF00DA98D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
