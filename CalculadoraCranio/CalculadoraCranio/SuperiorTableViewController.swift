@@ -40,7 +40,7 @@ class SuperiorTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //QTD NA LISTA
+        //QTD NA LISTAA
         return names.count
     }
 
