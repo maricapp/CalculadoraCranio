@@ -13,14 +13,21 @@ class SuperiorTableViewController: UITableViewController {
     //INSTANCIA A LISTA
     var names = [String]()
     var lastSelectIndex = 0
+    var listaEdtMedidasInseridas = [UITextField]()
     
     //FUNC - PREENCHE A LISTA
     func appendNames(){
         names.append("Angulo da Concavidade Frontal")
-        names.append("Comprimento Máximo do Crânio")
+        /*names.append("Comprimento Máximo do Crânio")
         names.append("Largura Máxima do Crânio")
         names.append("Altura Basion-Bregma")
-        names.append("Comprimento Basion-Nasion")
+        names.append("Comprimento Basion-Nasion")*/
+    }
+    
+    var campo1:UITextField!
+    
+    func appendLista(){
+        listaEdtMedidasInseridas.append(campo1!)
     }
 
     override func viewDidLoad() {
@@ -34,6 +41,8 @@ class SuperiorTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
+   
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -55,18 +64,20 @@ class SuperiorTableViewController: UITableViewController {
     }
 
     //evento para celulas retornadas => o que acontece quando eu toco na celula
+    /*
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         lastSelectIndex = indexPath.item
         self.performSegueWithIdentifier("SuperiorDetalheSegue", sender: self)
     }
+ */
     
-    
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         let otherView = segue.destinationViewController as! ViewController
         
         
         otherView.messageReceived = names[lastSelectIndex]
-    }
+    }*/
 
 }

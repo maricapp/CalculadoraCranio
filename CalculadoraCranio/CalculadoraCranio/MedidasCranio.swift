@@ -9,6 +9,13 @@
 import UIKit
 
 class MedidasCranio: NSObject {
+    
+    //func getSuperior() -> [Float]{
+    //    var lista = [Float]()
+    //    lista.append(med1_AngulodaConcavidadeFrontal)
+    //
+    //}
+    
     //variaveis
     var med1_AngulodaConcavidadeFrontal: Float?
     var med2_ComprimentoMaximodoCranio: Float?
