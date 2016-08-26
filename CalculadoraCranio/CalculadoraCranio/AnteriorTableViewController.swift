@@ -1,14 +1,14 @@
 //
-//  SuperiorTableViewController.swift
+//  AnteriorTableViewController.swift
 //  CalculadoraCranio
 //
-//  Created by Usuário Convidado on 24/08/16.
+//  Created by Usuário Convidado on 26/08/16.
 //  Copyright © 2016 LLMM. All rights reserved.
 //
 
 import UIKit
 
-class SuperiorTableViewController: UITableViewController {
+class AnteriorTableViewController: UITableViewController {
     
     //INSTANCIA A LISTA
     var medicoes = [String]()
@@ -17,18 +17,10 @@ class SuperiorTableViewController: UITableViewController {
     
     //FUNC - PREENCHE A LISTA
     func adicionaMedicoes(){
-        medicoes.append("Angulo da Concavidade Frontal")
-        medicoes.append("Comprimento Máximo do Crânio")
-        medicoes.append("Largura Máxima do Crânio")
-        medicoes.append("Altura Basion-Bregma")
-        medicoes.append("Comprimento Basion-Nasion")
+        medicoes.append("Largura Facial Superior")
     }
     
     func adicionaValoresIniciais(){
-        valores.append(0)
-        valores.append(0)
-        valores.append(0)
-        valores.append(0)
         valores.append(0)
     }
     
@@ -39,7 +31,7 @@ class SuperiorTableViewController: UITableViewController {
         adicionaMedicoes()
         adicionaValoresIniciais()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -47,13 +39,13 @@ class SuperiorTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return medicoes.count
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SuperiorTableViewCell", forIndexPath: indexPath) as! SuperiorTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("AnteriorTableViewCell", forIndexPath: indexPath) as! AnteriorTableViewCell
         cell.cellLabel.text = medicoes[indexPath.item]
         cell.edtValor.tag = indexPath.row
         cell.edtValor.addTarget(self, action: "sentEventsEditingDidEnd:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -72,7 +64,8 @@ class SuperiorTableViewController: UITableViewController {
             valores[posicao] = valor
         }
         
-        print("SUPERIOR:")
+        
+        print("ANTERIOR:")
         print(valores)
     }
 }

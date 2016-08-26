@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC164BF41D71023E00C119A2 /* AnteriorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC164BF31D71023E00C119A2 /* AnteriorTableViewController.swift */; };
+		AC164BF61D7102C800C119A2 /* AnteriorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC164BF51D7102C800C119A2 /* AnteriorTableViewCell.swift */; };
 		AC29FC7F1D6E7601001BF5C0 /* MedidasCranio.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29FC7E1D6E7601001BF5C0 /* MedidasCranio.swift */; };
 		ACFCF5741D6E48EF00DA98D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCF5731D6E48EF00DA98D3 /* AppDelegate.swift */; };
 		ACFCF5761D6E48EF00DA98D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCF5751D6E48EF00DA98D3 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC164BF31D71023E00C119A2 /* AnteriorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnteriorTableViewController.swift; sourceTree = "<group>"; };
+		AC164BF51D7102C800C119A2 /* AnteriorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnteriorTableViewCell.swift; sourceTree = "<group>"; };
 		AC29FC7E1D6E7601001BF5C0 /* MedidasCranio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedidasCranio.swift; sourceTree = "<group>"; };
 		ACFCF5701D6E48EF00DA98D3 /* CalculadoraCranio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculadoraCranio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCF5731D6E48EF00DA98D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				ACFCF57A1D6E48EF00DA98D3 /* Assets.xcassets */,
 				ACFCF57C1D6E48EF00DA98D3 /* LaunchScreen.storyboard */,
 				ACFCF57F1D6E48EF00DA98D3 /* Info.plist */,
+				AC164BF31D71023E00C119A2 /* AnteriorTableViewController.swift */,
+				AC164BF51D7102C800C119A2 /* AnteriorTableViewCell.swift */,
 			);
 			path = CalculadoraCranio;
 			sourceTree = "<group>";
@@ -266,6 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFCF5761D6E48EF00DA98D3 /* ViewController.swift in Sources */,
+				AC164BF61D7102C800C119A2 /* AnteriorTableViewCell.swift in Sources */,
+				AC164BF41D71023E00C119A2 /* AnteriorTableViewController.swift in Sources */,
 				ACFCF5741D6E48EF00DA98D3 /* AppDelegate.swift in Sources */,
 				ACFCF5A41D6E5AC400DA98D3 /* SuperiorTableViewCell.swift in Sources */,
 				ACFCF5A21D6E557700DA98D3 /* SuperiorTableViewController.swift in Sources */,
