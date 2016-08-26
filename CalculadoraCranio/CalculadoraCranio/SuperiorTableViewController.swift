@@ -72,8 +72,13 @@ class SuperiorTableViewController: UITableViewController {
             valores[posicao] = valor
         }
         
+        let calc = Calculadora()
+        calc.attribuirMedidasSuperior(valores)
+        
         print("SUPERIOR:")
         print(valores)
+        print(calc.obterGenero())
+        print("")
     }
 }
 

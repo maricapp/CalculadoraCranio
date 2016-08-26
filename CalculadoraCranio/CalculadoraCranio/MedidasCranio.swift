@@ -7,10 +7,45 @@
 //
 
 import UIKit
-class MedidasSuperior: NSObject {
+class Calculadora: NSObject {
     
-    var angulodaConcavidadeFrontal: Float?
-    var comprimentoMaximodoCranio: Float?
+    var medidasSuperior: [Float]
+    var medidasAnterior: [Float]
+    
+    override init(){
+        medidasSuperior = [Float](count: 1, repeatedValue: 0.0)
+        medidasAnterior = [Float](count: 1, repeatedValue: 0.0)
+    }
+    
+    func attribuirMedidasSuperior(valor: [Float]) {
+        medidasSuperior = valor
+        print(" ---calc--- ")
+        print(medidasSuperior)
+        print("")
+    }
+    
+    func attribuirMedidasAnterior(valor: [Float]) {
+        medidasAnterior = valor
+        print(" ---calc--- ")
+        print(medidasAnterior)
+        print("")
+    }
+    
+    func obterGenero() -> String {
+        
+        var genero:String = ""
+        
+        let sumSuperior = medidasSuperior.reduce(0, combine: +)
+        let sumAnterior = medidasAnterior.reduce(0, combine: +)
+        
+        if sumSuperior + sumAnterior > 100{
+            genero = "Masculino"
+        } else {
+            genero = "Feminino"
+        }
+        
+        return genero
+    }
 }
 
 class MedidasCranio: NSObject {

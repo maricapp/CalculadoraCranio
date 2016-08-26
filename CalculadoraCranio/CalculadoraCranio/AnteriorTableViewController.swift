@@ -66,9 +66,13 @@ class AnteriorTableViewController: UITableViewController {
             valores[posicao] = valor
         }
         
+        let calc = Calculadora()
+        calc.attribuirMedidasAnterior(valores)
         
         print("ANTERIOR:")
         print(valores)
+        print(calc.obterGenero())
+        print("")
     }
 }
 
