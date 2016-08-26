@@ -7,6 +7,11 @@
 //
 
 import UIKit
+class MedidasSuperior: NSObject {
+    
+    var angulodaConcavidadeFrontal: Float?
+    var comprimentoMaximodoCranio: Float?
+}
 
 class MedidasCranio: NSObject {
     

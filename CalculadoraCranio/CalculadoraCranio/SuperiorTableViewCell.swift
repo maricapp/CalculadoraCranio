@@ -18,14 +18,6 @@ class SuperiorTableViewCell: UITableViewCell {
         
         // Initialization codeeee
     }
-
-  
-    @IBAction func foo(sender: AnyObject) {
-        print("aaaaaa")
-    }
-    @IBAction func asdasd(sender: AnyObject) {
-        print("bbbb")
-    }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

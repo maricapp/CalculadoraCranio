@@ -11,73 +11,87 @@ import UIKit
 class SuperiorTableViewController: UITableViewController {
     
     //INSTANCIA A LISTA
-    var names = [String]()
+    var medicoes = [String]()
+    var valores = [Float]()
     var lastSelectIndex = 0
-    var listaEdtMedidasInseridas = [UITextField]()
     
     //FUNC - PREENCHE A LISTA
-    func appendNames(){
-        names.append("Angulo da Concavidade Frontal")
-        /*names.append("Comprimento Máximo do Crânio")
-        names.append("Largura Máxima do Crânio")
-        names.append("Altura Basion-Bregma")
-        names.append("Comprimento Basion-Nasion")*/
+    func adicionaMedicoes(){
+        medicoes.append("Angulo da Concavidade Frontal")
+        medicoes.append("Comprimento Máximo do Crânio")
+        medicoes.append("Largura Máxima do Crânio")
+        medicoes.append("Altura Basion-Bregma")
+        medicoes.append("Comprimento Basion-Nasion")
     }
     
-    var campo1:UITextField!
-    
-    func appendLista(){
-        listaEdtMedidasInseridas.append(campo1!)
+    func adicionaValoresIniciais(){
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //PREENCHER A LISTA
-        appendNames()
+        //PREENCHE LISTAS
+        adicionaMedicoes()
+        adicionaValoresIniciais()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-   
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        //QTD NA LISTAA
-        return names.count
+        return medicoes.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        //OBTEM CELULAR PELO IDENTIFIER
         let cell = tableView.dequeueReusableCellWithIdentifier("SuperiorTableViewCell", forIndexPath: indexPath) as! SuperiorTableViewCell
-        //POPULAR TEXTO DO LABEL DA CELULA
-        cell.cellLabel.text = names[indexPath.item]
+        cell.cellLabel.text = medicoes[indexPath.item]
+        cell.edtValor.tag = indexPath.row
+        cell.edtValor.addTarget(self, action: "sentEventsEditingDidEnd:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
+        
         
         return cell
     }
 
     //evento para celulas retornadas => o que acontece quando eu toco na celula
-    /*
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        lastSelectIndex = indexPath.item
-        self.performSegueWithIdentifier("SuperiorDetalheSegue", sender: self)
+        //lastSelectIndex = indexPath.item
+        //self.performSegueWithIdentifier("SuperiorDetalheSegue", sender: self)
     }
- */
+ 
     
-    /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+    @IBAction func sentEventsEditingDidEnd(sender: UITextField) {
+        
+        let edtValorRow = sender.tag
+        
+        let texto:String? = sender.text
+        
+        if (texto != nil)
+        {
+            let floatValue : Float = NSString(string: texto!).floatValue
+            valores[edtValorRow] = floatValue
+        }
+        
+        print(valores)
+    }
+    
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         let otherView = segue.destinationViewController as! ViewController
         
         
-        otherView.messageReceived = names[lastSelectIndex]
+        otherView.messageReceived = medicoes[lastSelectIndex]
     }*/
 
 }
