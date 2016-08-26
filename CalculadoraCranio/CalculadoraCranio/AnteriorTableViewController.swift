@@ -18,9 +18,11 @@ class AnteriorTableViewController: UITableViewController {
     //FUNC - PREENCHE A LISTA
     func adicionaMedicoes(){
         medicoes.append("Largura Facial Superior")
+        medicoes.append("Altura Facial Superior")
     }
     
     func adicionaValoresIniciais(){
+        valores.append(0)
         valores.append(0)
     }
     
@@ -69,3 +71,10 @@ class AnteriorTableViewController: UITableViewController {
         print(valores)
     }
 }
+
+
+
+
+
+
+
