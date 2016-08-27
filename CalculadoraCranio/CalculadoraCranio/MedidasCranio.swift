@@ -15,6 +15,8 @@ class Calculadora: NSObject {
     override init(){
         medidasSuperior = [Float](count: 1, repeatedValue: 0.0)
         medidasAnterior = [Float](count: 1, repeatedValue: 0.0)
+        
+        print("nova calculadora em memoria")
     }
     
     func attribuirMedidasSuperior(valor: [Float]) {
@@ -37,11 +39,12 @@ class Calculadora: NSObject {
         
         let sumSuperior = medidasSuperior.reduce(0, combine: +)
         let sumAnterior = medidasAnterior.reduce(0, combine: +)
-        
-        if sumSuperior + sumAnterior > 100{
-            genero = "Masculino"
+        if sumSuperior + sumAnterior < 50{
+            genero = "-1"
+        }else if sumSuperior + sumAnterior > 100{
+            genero = "M"
         } else {
-            genero = "Feminino"
+            genero = "F"
         }
         
         return genero

@@ -15,6 +15,8 @@ class AnteriorTableViewController: UITableViewController {
     var valores = [Float]()
     var lastSelectIndex = 0
     
+    var calcObj = Calculadora()
+    
     //FUNC - PREENCHE A LISTA
     func adicionaMedicoes(){
         medicoes.append("Largura Facial Superior")
@@ -66,12 +68,11 @@ class AnteriorTableViewController: UITableViewController {
             valores[posicao] = valor
         }
         
-        let calc = Calculadora()
-        calc.attribuirMedidasAnterior(valores)
+        calcObj.attribuirMedidasAnterior(valores)
         
         print("ANTERIOR:")
         print(valores)
-        print(calc.obterGenero())
+        print(calcObj.obterGenero())
         print("")
     }
 }

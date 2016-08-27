@@ -15,6 +15,8 @@ class SuperiorTableViewController: UITableViewController {
     var valores = [Float]()
     var lastSelectIndex = 0
     
+    var calcObj = Calculadora()
+    
     //FUNC - PREENCHE A LISTA
     func adicionaMedicoes(){
         medicoes.append("Angulo da Concavidade Frontal")
@@ -24,6 +26,8 @@ class SuperiorTableViewController: UITableViewController {
         medicoes.append("Comprimento Basion-Nasion")
     }
     
+    @IBOutlet weak var lblResultado: UIBarButtonItem!
+    
     func adicionaValoresIniciais(){
         valores.append(0)
         valores.append(0)
@@ -32,12 +36,22 @@ class SuperiorTableViewController: UITableViewController {
         valores.append(0)
     }
     
+    
+    let resultadoTopo: UIButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lblResultado.title = ""
         
         //PREENCHE LISTAS
         adicionaMedicoes()
         adicionaValoresIniciais()
+        
+        resultadoTopo.setImage(UIImage(named: "nd32.png"), forState: UIControlState.Normal)
+        resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
+        let barButton = UIBarButtonItem(customView: resultadoTopo)
+        self.navigationItem.rightBarButtonItem = barButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,13 +86,34 @@ class SuperiorTableViewController: UITableViewController {
             valores[posicao] = valor
         }
         
-        let calc = Calculadora()
-        calc.attribuirMedidasSuperior(valores)
-        
+        calcObj.attribuirMedidasSuperior(valores)
+        //var genero:String = calcObj.obterGenero()
         print("SUPERIOR:")
         print(valores)
-        print(calc.obterGenero())
+        print(calcObj.obterGenero())
         print("")
+        
+        /*if let font = UIFont(name: "AvenirNext", size: 11) {
+            lblResultado.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
+        }*/
+        
+        if calcObj.obterGenero() == "F" {
+            resultadoTopo.setImage(UIImage(named: "female32.png"), forState: UIControlState.Normal)
+            resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
+            let barButton = UIBarButtonItem(customView: resultadoTopo)
+            self.navigationItem.rightBarButtonItem = barButton
+        } else if calcObj.obterGenero() == "M" {
+            resultadoTopo.setImage(UIImage(named: "male32.png"), forState: UIControlState.Normal)
+            resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
+            let barButton = UIBarButtonItem(customView: resultadoTopo)
+            self.navigationItem.rightBarButtonItem = barButton
+        } else if calcObj.obterGenero() == "-1" {
+            resultadoTopo.setImage(UIImage(named: "nd32.png"), forState: UIControlState.Normal)
+            resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
+            let barButton = UIBarButtonItem(customView: resultadoTopo)
+            self.navigationItem.rightBarButtonItem = barButton
+        }
+        
     }
 }
 

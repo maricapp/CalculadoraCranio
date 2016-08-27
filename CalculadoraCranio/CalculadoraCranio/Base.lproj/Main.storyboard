@@ -48,8 +48,13 @@
                             <outlet property="delegate" destination="hJ1-Wt-3f7" id="bGp-EP-4sh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Superior" id="24b-M6-bXC"/>
+                    <navigationItem key="navigationItem" title="Superior" id="24b-M6-bXC">
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="Item" image="nd" style="done" id="EHo-L5-BWf"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="lblResultado" destination="EHo-L5-BWf" id="cN1-jQ-p2t"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhJ-g0-vsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,7 +167,10 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kx2-YY-nD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-605" y="965"/>
+            <point key="canvasLocation" x="-739" y="1343"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nd" width="32" height="32"/>
+    </resources>
 </document>
