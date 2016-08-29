@@ -60,12 +60,6 @@ class SuperiorTableViewController: UITableViewController {
         let genero = CalcSingleton.obterGenero()
         atualizaIcone(genero)
     }
-    
-    
-    
-    
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -114,7 +108,7 @@ class SuperiorTableViewController: UITableViewController {
             let barButton = UIBarButtonItem(customView: resultadoTopo)
             self.navigationItem.rightBarButtonItem = barButton
         } else if genero == "M" {
-            resultadoTopo.setImage(UIImage(named: "male32.png"), forState: UIControlState.Normal)
+            resultadoTopo.setImage(UIImage(named: "masc64.png"), forState: UIControlState.Normal)
             resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
             let barButton = UIBarButtonItem(customView: resultadoTopo)
             self.navigationItem.rightBarButtonItem = barButton

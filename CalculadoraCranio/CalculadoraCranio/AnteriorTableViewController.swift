@@ -41,7 +41,6 @@ class AnteriorTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        
         let genero = CalcSingleton.obterGenero()
         atualizaIcone(genero)
     }
@@ -90,7 +89,7 @@ class AnteriorTableViewController: UITableViewController {
         let barButton = UIBarButtonItem(customView: resultadoTopo)
         self.navigationItem.rightBarButtonItem = barButton
     } else if genero == "M" {
-        resultadoTopo.setImage(UIImage(named: "male32.png"), forState: UIControlState.Normal)
+        resultadoTopo.setImage(UIImage(named: "masc64.png"), forState: UIControlState.Normal)
         resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
         let barButton = UIBarButtonItem(customView: resultadoTopo)
         self.navigationItem.rightBarButtonItem = barButton
