@@ -14,8 +14,7 @@ class SuperiorTableViewController: UITableViewController {
     var medicoes = [String]()
     var valores = [Float]()
     var lastSelectIndex = 0
-    
-    var calcObj = Calculadora()
+    let resultadoTopo: UIButton = UIButton()
     
     //FUNC - PREENCHE A LISTA
     func adicionaMedicoes(){
@@ -36,9 +35,6 @@ class SuperiorTableViewController: UITableViewController {
         valores.append(0)
     }
     
-    
-    let resultadoTopo: UIButton = UIButton()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,7 +48,24 @@ class SuperiorTableViewController: UITableViewController {
         resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
         let barButton = UIBarButtonItem(customView: resultadoTopo)
         self.navigationItem.rightBarButtonItem = barButton
+        
+        
+        
+        let genero = CalcSingleton.obterGenero()
+        atualizaIcone(genero)
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        let genero = CalcSingleton.obterGenero()
+        atualizaIcone(genero)
+    }
+    
+    
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -86,28 +99,46 @@ class SuperiorTableViewController: UITableViewController {
             valores[posicao] = valor
         }
         
-        calcObj.attribuirMedidasSuperior(valores)
-        //var genero:String = calcObj.obterGenero()
-        print("SUPERIOR:")
-        print(valores)
-        print(calcObj.obterGenero())
-        print("")
-        
-        /*if let font = UIFont(name: "AvenirNext", size: 11) {
-            lblResultado.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
+        /*CalcSingleton.attribuirMedidasSuperior{ (varFromFunction:[Float]) in
+            print("varFromFunction")
+            print(varFromFunction)
+            return self.valores
         }*/
         
-        if calcObj.obterGenero() == "F" {
+        CalcSingleton.attribuirMedidasSuperior(self.valores)
+        let genero = CalcSingleton.obterGenero()
+        
+        if genero == "F" {
             resultadoTopo.setImage(UIImage(named: "female32.png"), forState: UIControlState.Normal)
             resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
             let barButton = UIBarButtonItem(customView: resultadoTopo)
             self.navigationItem.rightBarButtonItem = barButton
-        } else if calcObj.obterGenero() == "M" {
+        } else if genero == "M" {
             resultadoTopo.setImage(UIImage(named: "male32.png"), forState: UIControlState.Normal)
             resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
             let barButton = UIBarButtonItem(customView: resultadoTopo)
             self.navigationItem.rightBarButtonItem = barButton
-        } else if calcObj.obterGenero() == "-1" {
+        } else if genero == "-1" {
+            resultadoTopo.setImage(UIImage(named: "nd32.png"), forState: UIControlState.Normal)
+            resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
+            let barButton = UIBarButtonItem(customView: resultadoTopo)
+            self.navigationItem.rightBarButtonItem = barButton
+        }
+        
+    }
+    
+    func atualizaIcone(genero:String){
+        if genero == "F" {
+            resultadoTopo.setImage(UIImage(named: "female32.png"), forState: UIControlState.Normal)
+            resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
+            let barButton = UIBarButtonItem(customView: resultadoTopo)
+            self.navigationItem.rightBarButtonItem = barButton
+        } else if genero == "M" {
+            resultadoTopo.setImage(UIImage(named: "male32.png"), forState: UIControlState.Normal)
+            resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
+            let barButton = UIBarButtonItem(customView: resultadoTopo)
+            self.navigationItem.rightBarButtonItem = barButton
+        } else if genero == "-1" {
             resultadoTopo.setImage(UIImage(named: "nd32.png"), forState: UIControlState.Normal)
             resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
             let barButton = UIBarButtonItem(customView: resultadoTopo)

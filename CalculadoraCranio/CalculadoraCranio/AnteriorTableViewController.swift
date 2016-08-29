@@ -14,6 +14,7 @@ class AnteriorTableViewController: UITableViewController {
     var medicoes = [String]()
     var valores = [Float]()
     var lastSelectIndex = 0
+    let resultadoTopo: UIButton = UIButton()
     
     var calcObj = Calculadora()
     
@@ -34,6 +35,15 @@ class AnteriorTableViewController: UITableViewController {
         //PREENCHE LISTAS
         adicionaMedicoes()
         adicionaValoresIniciais()
+        
+        let genero = CalcSingleton.obterGenero()
+        atualizaIcone(genero)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        let genero = CalcSingleton.obterGenero()
+        atualizaIcone(genero)
     }
     
     override func didReceiveMemoryWarning() {
@@ -68,12 +78,29 @@ class AnteriorTableViewController: UITableViewController {
             valores[posicao] = valor
         }
         
-        calcObj.attribuirMedidasAnterior(valores)
+        CalcSingleton.attribuirMedidasAnterior(self.valores)
+        let genero = CalcSingleton.obterGenero()
+        atualizaIcone(genero)
+    }
+    
+    func atualizaIcone(genero:String){
+        if genero == "F" {
+        resultadoTopo.setImage(UIImage(named: "female32.png"), forState: UIControlState.Normal)
+        resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
+        let barButton = UIBarButtonItem(customView: resultadoTopo)
+        self.navigationItem.rightBarButtonItem = barButton
+    } else if genero == "M" {
+        resultadoTopo.setImage(UIImage(named: "male32.png"), forState: UIControlState.Normal)
+        resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
+        let barButton = UIBarButtonItem(customView: resultadoTopo)
+        self.navigationItem.rightBarButtonItem = barButton
+    } else if genero == "-1" {
+        resultadoTopo.setImage(UIImage(named: "nd32.png"), forState: UIControlState.Normal)
+        resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
+        let barButton = UIBarButtonItem(customView: resultadoTopo)
+        self.navigationItem.rightBarButtonItem = barButton
+        }
         
-        print("ANTERIOR:")
-        print(valores)
-        print(calcObj.obterGenero())
-        print("")
     }
 }
 

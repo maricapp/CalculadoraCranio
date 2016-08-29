@@ -7,6 +7,54 @@
 //
 
 import UIKit
+
+class CalcSingleton {
+    
+    static var medidasSuperior = [Float]()
+    static var medidasAnterior = [Float]()
+    
+    static let sharedInstance = CalcSingleton()
+    
+    private init() { }
+    
+    class func attribuirMedidasSuperior(handler: [Float]) {
+        medidasSuperior = handler
+        print("Valor \(medidasSuperior) atribuido para medidasSuperior em calculadora singleton ")
+        print("")
+    }
+    
+    class func attribuirMedidasAnterior(handler: [Float]) {
+        medidasAnterior = handler
+        print("Valor \(medidasAnterior) atribuido para medidasAnterior em calculadora singleton ")
+        print("")
+    }
+    
+    class func obterGenero() -> String {
+        
+        var genero:String = ""
+        
+        let sumSuperior = medidasSuperior.reduce(0, combine: +)
+        print("Soma do array sumSuperior: \(sumSuperior)")
+        print("")
+        
+        let sumAnterior = medidasAnterior.reduce(0, combine: +)
+        print("Soma do array sumAnterior: \(sumAnterior)")
+        print("")
+        
+        if sumSuperior + sumAnterior < 50{
+            genero = "-1"
+        } else if sumSuperior + sumAnterior > 100{
+            genero = "M"
+        } else {
+            genero = "F"
+        }
+        print("Genero: \(genero)")
+        print("")
+        return genero
+    }
+
+}
+
 class Calculadora: NSObject {
     
     var medidasSuperior: [Float]
@@ -15,22 +63,14 @@ class Calculadora: NSObject {
     override init(){
         medidasSuperior = [Float](count: 1, repeatedValue: 0.0)
         medidasAnterior = [Float](count: 1, repeatedValue: 0.0)
-        
-        print("nova calculadora em memoria")
     }
     
     func attribuirMedidasSuperior(valor: [Float]) {
         medidasSuperior = valor
-        print(" ---calc--- ")
-        print(medidasSuperior)
-        print("")
     }
     
     func attribuirMedidasAnterior(valor: [Float]) {
         medidasAnterior = valor
-        print(" ---calc--- ")
-        print(medidasAnterior)
-        print("")
     }
     
     func obterGenero() -> String {
@@ -52,13 +92,6 @@ class Calculadora: NSObject {
 }
 
 class MedidasCranio: NSObject {
-    
-    //func getSuperior() -> [Float]{
-    //    var lista = [Float]()
-    //    lista.append(med1_AngulodaConcavidadeFrontal)
-    //
-    //}
-    
     //variaveis
     var med1_AngulodaConcavidadeFrontal: Float?
     var med2_ComprimentoMaximodoCranio: Float?
@@ -132,6 +165,4 @@ class MedidasCranio: NSObject {
     var med54E_AnguloMandibular: Float?
     var med55D_ProfundidadeIncisuraMandibular: Float?
     var med55E_ProfundidadeIncisuraMandibular: Float?
-    
-    
 }
