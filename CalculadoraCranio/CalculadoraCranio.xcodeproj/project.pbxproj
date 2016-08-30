@@ -16,6 +16,7 @@
 		AC4CE6231D74DDBD004EDF83 /* male32.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4CE6201D74DDBD004EDF83 /* male32.png */; };
 		AC4CE6241D74DDBD004EDF83 /* nd32.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4CE6211D74DDBD004EDF83 /* nd32.png */; };
 		AC4CE62D1D750CB2004EDF83 /* PosteriorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CE62C1D750CB2004EDF83 /* PosteriorTableViewController.swift */; };
+		AC4CE62F1D751142004EDF83 /* PosteriorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4CE62E1D751142004EDF83 /* PosteriorTableViewCell.swift */; };
 		ACFCF5741D6E48EF00DA98D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCF5731D6E48EF00DA98D3 /* AppDelegate.swift */; };
 		ACFCF5761D6E48EF00DA98D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCF5751D6E48EF00DA98D3 /* ViewController.swift */; };
 		ACFCF5791D6E48EF00DA98D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFCF5771D6E48EF00DA98D3 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		AC4CE6201D74DDBD004EDF83 /* male32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = male32.png; path = ../../../../male32.png; sourceTree = "<group>"; };
 		AC4CE6211D74DDBD004EDF83 /* nd32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nd32.png; path = ../../../../nd32.png; sourceTree = "<group>"; };
 		AC4CE62C1D750CB2004EDF83 /* PosteriorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosteriorTableViewController.swift; sourceTree = "<group>"; };
+		AC4CE62E1D751142004EDF83 /* PosteriorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosteriorTableViewCell.swift; sourceTree = "<group>"; };
 		ACFCF5701D6E48EF00DA98D3 /* CalculadoraCranio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculadoraCranio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCF5731D6E48EF00DA98D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACFCF5751D6E48EF00DA98D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,13 +101,14 @@
 		AC3CBAEE1D74F4BF006C475D /* Abas */ = {
 			isa = PBXGroup;
 			children = (
+				ACFCF5A11D6E557700DA98D3 /* SuperiorTableViewController.swift */,
+				ACFCF5A31D6E5AC400DA98D3 /* SuperiorTableViewCell.swift */,
 				AC164BF31D71023E00C119A2 /* AnteriorTableViewController.swift */,
 				AC164BF51D7102C800C119A2 /* AnteriorTableViewCell.swift */,
-				ACFCF5A11D6E557700DA98D3 /* SuperiorTableViewController.swift */,
 				AC3CBAEA1D74F483006C475D /* LateralTableViewController.swift */,
-				ACFCF5A31D6E5AC400DA98D3 /* SuperiorTableViewCell.swift */,
 				AC3CBAEC1D74F4B2006C475D /* LateralTableViewCell.swift */,
 				AC4CE62C1D750CB2004EDF83 /* PosteriorTableViewController.swift */,
+				AC4CE62E1D751142004EDF83 /* PosteriorTableViewCell.swift */,
 			);
 			name = Abas;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				ACFCF5A21D6E557700DA98D3 /* SuperiorTableViewController.swift in Sources */,
 				AC4CE62D1D750CB2004EDF83 /* PosteriorTableViewController.swift in Sources */,
 				AC3CBAEB1D74F483006C475D /* LateralTableViewController.swift in Sources */,
+				AC4CE62F1D751142004EDF83 /* PosteriorTableViewCell.swift in Sources */,
 				AC29FC7F1D6E7601001BF5C0 /* MedidasCranio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

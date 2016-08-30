@@ -227,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PosteriorTableViewCell" rowHeight="85" id="G5q-Gx-jwf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PosteriorTableViewCell" rowHeight="85" id="G5q-Gx-jwf" customClass="PosteriorTableViewCell" customModule="CalculadoraCranio" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G5q-Gx-jwf" id="etT-4q-4gf">
@@ -247,6 +247,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellLabel" destination="mu3-5v-ShF" id="hSc-Rs-mZ5"/>
+                                    <outlet property="edtValor" destination="iEl-LU-ZPl" id="QYU-3f-EgM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

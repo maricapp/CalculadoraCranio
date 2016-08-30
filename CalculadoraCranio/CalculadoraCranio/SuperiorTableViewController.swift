@@ -102,22 +102,7 @@ class SuperiorTableViewController: UITableViewController {
         CalcSingleton.attribuirMedidasSuperior(self.valores)
         let genero = CalcSingleton.obterGenero()
         
-        if genero == "F" {
-            resultadoTopo.setImage(UIImage(named: "female32.png"), forState: UIControlState.Normal)
-            resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
-            let barButton = UIBarButtonItem(customView: resultadoTopo)
-            self.navigationItem.rightBarButtonItem = barButton
-        } else if genero == "M" {
-            resultadoTopo.setImage(UIImage(named: "masc64.png"), forState: UIControlState.Normal)
-            resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
-            let barButton = UIBarButtonItem(customView: resultadoTopo)
-            self.navigationItem.rightBarButtonItem = barButton
-        } else if genero == "-1" {
-            resultadoTopo.setImage(UIImage(named: "nd32.png"), forState: UIControlState.Normal)
-            resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
-            let barButton = UIBarButtonItem(customView: resultadoTopo)
-            self.navigationItem.rightBarButtonItem = barButton
-        }
+        atualizaIcone(genero)
         
     }
     

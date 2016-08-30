@@ -1,14 +1,14 @@
 //
-//  AnteriorTableViewCell.swift
+//  PosteriorTableViewCell.swift
 //  CalculadoraCranio
 //
-//  Created by Usuário Convidado on 26/08/16.
+//  Created by Usuário Convidado on 29/08/16.
 //  Copyright © 2016 LLMM. All rights reserved.
 //
 
 import UIKit
 
-class AnteriorTableViewCell: UITableViewCell {
+class PosteriorTableViewCell: UITableViewCell {
     
     @IBOutlet weak var edtValor: UITextField!
     @IBOutlet weak var cellLabel: UILabel!
@@ -19,5 +19,6 @@ class AnteriorTableViewCell: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }    
+    }
+    
 }
