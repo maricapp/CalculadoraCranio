@@ -8,13 +8,20 @@
 
 import UIKit
 
-class LateralTableViewCell: UITableViewCell {
+class LateralTableViewCell: UITableViewCell , UITextFieldDelegate {
 
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var edtValor: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        edtValor.resignFirstResponder()
+        
     }
    
     override func setSelected(selected: Bool, animated: Bool) {

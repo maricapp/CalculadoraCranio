@@ -41,12 +41,15 @@ class LateralTableViewController: UITableViewController {
         
         adicionaMedicoes()
         adicionaValoresIniciais()
+        
+        let genero = CalcSingleton.obterGenero()
+        atualizaIcone(genero)
     }
     
     override func viewDidAppear(animated: Bool) {
         
-        //let genero = CalcSingleton.obterGenero()
-        //atualizaIcone(genero)
+        let genero = CalcSingleton.obterGenero()
+        atualizaIcone(genero)
     }
     
 
@@ -110,6 +113,7 @@ class LateralTableViewController: UITableViewController {
         }
         
     }
+    
 
 
     /*
