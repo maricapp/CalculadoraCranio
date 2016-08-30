@@ -16,7 +16,6 @@ class AnteriorTableViewController: UITableViewController {
     var lastSelectIndex = 0
     let resultadoTopo: UIButton = UIButton()
     
-    var calcObj = Calculadora()
     
     //FUNC - PREENCHE A LISTA
     func adicionaMedicoes(){

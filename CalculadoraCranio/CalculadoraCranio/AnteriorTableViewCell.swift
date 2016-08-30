@@ -18,7 +18,10 @@ class AnteriorTableViewCell: UITableViewCell {
         
         // Initialization codeeee
     }
-    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        edtValor.resignFirstResponder()
+    }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
