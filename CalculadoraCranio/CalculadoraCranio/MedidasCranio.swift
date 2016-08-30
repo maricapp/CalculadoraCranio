@@ -59,6 +59,7 @@ class Calculadora: NSObject {
     
     var medidasSuperior: [Float]
     var medidasAnterior: [Float]
+    //var medidasLateral: [Float]
     
     override init(){
         medidasSuperior = [Float](count: 1, repeatedValue: 0.0)

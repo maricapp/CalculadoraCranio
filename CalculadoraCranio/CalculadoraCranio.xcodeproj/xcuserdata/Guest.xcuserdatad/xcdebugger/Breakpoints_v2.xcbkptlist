@@ -25,8 +25,23 @@
                   symbolName = "CalculadoraCranio.ViewController.messageReceived.setter : Swift.String"
                   moduleName = "CalculadoraCranio"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Guest/Desktop/cranioo/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
-                  timestampString = "494201278.512856"
+                  urlString = "file:///Users/Guest/Desktop/Cranio/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
+                  timestampString = "494208759.954321"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculadoraCranio.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; CalculadoraCranio.ViewController"
+                  moduleName = "CalculadoraCranio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Guest/Desktop/Cranio/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
+                  timestampString = "494208759.954435"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -37,31 +52,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CalculadoraCranio.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; CalculadoraCranio.ViewController"
-                  moduleName = "CalculadoraCranio"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Guest/Desktop/cranioo/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
-                  timestampString = "494201278.513038"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
                   symbolName = "CalculadoraCranio.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CalculadoraCranio.ViewController&gt;"
                   moduleName = "CalculadoraCranio"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Guest/Desktop/cranioo/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
-                  timestampString = "494201278.513144"
+                  urlString = "file:///Users/Guest/Desktop/Cranio/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
+                  timestampString = "494208759.954538"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "32">
+                  offsetFromSymbolStart = "40">
                </Location>
             </Locations>
          </BreakpointContent>

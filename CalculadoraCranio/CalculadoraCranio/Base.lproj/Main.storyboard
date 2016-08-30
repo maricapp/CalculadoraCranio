@@ -105,14 +105,14 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anterior" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIy-mG-c9J">
                                             <rect key="frame" x="22" y="14" width="290" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellLabel" destination="IIy-mG-c9J" id="hgS-WW-eLe"/>
-                                    <outlet property="edtValor" destination="S8o-lq-Cry" id="Wtx-Fy-XG9"/>
+                                    <outlet property="edtValor" destination="S8o-lq-Cry" id="DCD-8V-noX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -163,11 +163,78 @@
                     <connections>
                         <segue destination="Id3-9G-i0D" kind="relationship" relationship="viewControllers" id="f8v-fU-VcG"/>
                         <segue destination="5Oc-I0-V4O" kind="relationship" relationship="viewControllers" id="6f1-OI-Q0L"/>
+                        <segue destination="wjg-uM-A1k" kind="relationship" relationship="viewControllers" id="29J-l6-3aR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kx2-YY-nD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-739" y="1343"/>
+        </scene>
+        <!--Lateral-->
+        <scene sceneID="aCw-vA-gEc">
+            <objects>
+                <tableViewController title="Lateral" id="7dj-Ja-9bT" userLabel="Lateral" customClass="LateralTableViewController" customModule="CalculadoraCranio" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="eJS-t0-3u1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="LateralTableViewCell" editingAccessoryType="detailDisclosureButton" rowHeight="85" id="xdb-pX-drq" userLabel="LateralTableViewCell" customClass="LateralTableViewCell" customModule="CalculadoraCranio" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xdb-pX-drq" id="dCz-1Q-5St">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6r-kr-bUe">
+                                            <rect key="frame" x="8" y="8" width="304" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRV-d5-NPl">
+                                            <rect key="frame" x="8" y="37" width="155" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellLabel" destination="w6r-kr-bUe" id="GVs-ia-zst"/>
+                                    <outlet property="edtValor" destination="aRV-d5-NPl" id="LZT-nt-nzt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7dj-Ja-9bT" id="j1d-en-BYc"/>
+                            <outlet property="delegate" destination="7dj-Ja-9bT" id="DXL-KX-yfR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lateral" id="q6J-AT-KGP" userLabel="Lateral"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdW-3u-AcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="233" y="2346"/>
+        </scene>
+        <!--Lateral-->
+        <scene sceneID="ika-iy-5ZV">
+            <objects>
+                <navigationController title="Lateral" id="wjg-uM-A1k" userLabel="Lateral" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lateral" id="gf6-8u-wi6"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zzQ-NY-RSh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7dj-Ja-9bT" kind="relationship" relationship="rootViewController" id="dhy-lD-ku6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3G-TW-hHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="2346"/>
         </scene>
     </scenes>
     <resources>
