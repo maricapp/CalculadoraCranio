@@ -56,7 +56,6 @@ class SuperiorTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        
         let genero = CalcSingleton.obterGenero()
         atualizaIcone(genero)
     }

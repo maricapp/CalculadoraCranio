@@ -19,18 +19,26 @@ class PosteriorTableViewController: UITableViewController {
     //FUNC - PREENCHE A LISTA
     func adicionaMedicoes(){
         medicoes.append("xxxxx")
+        
+        
+        
+        
     }
     
     @IBOutlet weak var lblResultado: UIBarButtonItem!
     
     func adicionaValoresIniciais(){
         valores.append(0)
+        
+        
+        
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //lblResultado.title = ""
+        lblResultado.title = ""
         
         //PREENCHE LISTAS
         adicionaMedicoes()
@@ -48,7 +56,6 @@ class PosteriorTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        
         let genero = CalcSingleton.obterGenero()
         atualizaIcone(genero)
     }
@@ -85,13 +92,7 @@ class PosteriorTableViewController: UITableViewController {
             valores[posicao] = valor
         }
         
-        /*CalcSingleton.attribuirMedidasSuperior{ (varFromFunction:[Float]) in
-         print("varFromFunction")
-         print(varFromFunction)
-         return self.valores
-         }*/
-        
-        CalcSingleton.attribuirMedidasSuperior(self.valores)
+        CalcSingleton.attribuirMedidasPosterior(self.valores)
         let genero = CalcSingleton.obterGenero()
         
         atualizaIcone(genero)

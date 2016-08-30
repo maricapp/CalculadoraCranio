@@ -13,6 +13,7 @@ class CalcSingleton {
     static var medidasSuperior = [Float]()
     static var medidasAnterior = [Float]()
     static var medidasLateral = [Float]()
+    static var medidasPosterior = [Float]()
     
     static let sharedInstance = CalcSingleton()
     
@@ -36,6 +37,12 @@ class CalcSingleton {
         print("")
     }
     
+    class func attribuirMedidasPosterior(handler: [Float]) {
+        medidasPosterior = handler
+        print("Valor \(medidasPosterior) atribuido para medidasPosterior em calculadora singleton ")
+        print("")
+    }
+    
     class func obterGenero() -> String {
         
         var genero:String = ""
@@ -52,9 +59,16 @@ class CalcSingleton {
         print("Soma do array sumAnterior: \(sumLateral)")
         print("")
         
-        if sumSuperior + sumAnterior + sumLateral < 50{
+        let sumPosterior = medidasPosterior.reduce(0, combine: +)
+        print("Soma do array sumPosterior: \(sumPosterior)")
+        print("")
+        
+        
+        let somaTotal = sumSuperior + sumAnterior + sumLateral + sumPosterior
+        
+        if  somaTotal < 50{
             genero = "-1"
-        } else if sumSuperior + sumAnterior + sumLateral > 100{
+        } else if somaTotal > 100{
             genero = "M"
         } else {
             genero = "F"

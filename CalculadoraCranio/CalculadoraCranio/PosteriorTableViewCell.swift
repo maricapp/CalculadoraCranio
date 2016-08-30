@@ -8,13 +8,20 @@
 
 import UIKit
 
-class PosteriorTableViewCell: UITableViewCell {
+class PosteriorTableViewCell: UITableViewCell, UITextFieldDelegate { 
     
     @IBOutlet weak var edtValor: UITextField!
     @IBOutlet weak var cellLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        edtValor.resignFirstResponder()
+        
     }
     
     override func setSelected(selected: Bool, animated: Bool) {

@@ -241,6 +241,9 @@
                                             <rect key="frame" x="25" y="35" width="97" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="sentEventsEditingDidEnd:" destination="U0T-QV-oux" eventType="editingDidEnd" id="1G7-4p-xhM"/>
+                                            </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mu3-5v-ShF">
                                             <rect key="frame" x="16" y="8" width="42" height="21"/>
@@ -261,12 +264,17 @@
                             <outlet property="delegate" destination="U0T-QV-oux" id="2Xu-3Y-VDj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Posterior" id="wbZ-Ll-qwT"/>
+                    <navigationItem key="navigationItem" title="Posterior" id="tvK-NW-sju">
+                        <barButtonItem key="rightBarButtonItem" image="nd" style="done" id="iig-ET-YCG"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="lblResultado" destination="iig-ET-YCG" id="Y8j-pw-leQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWU-1t-sbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="2998"/>
+            <point key="canvasLocation" x="601" y="965"/>
         </scene>
         <!--Posterior-->
         <scene sceneID="2Zw-BN-F8d">
