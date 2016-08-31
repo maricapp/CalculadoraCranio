@@ -117,7 +117,6 @@ class SuperiorTableViewController: UITableViewController {
             
             destinationVC.mensagem = medicoes[sender!.tag]
             destinationVC.url = urls[sender!.tag]
-            
         }
     }
 

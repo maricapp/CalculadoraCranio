@@ -10,13 +10,13 @@ import UIKit
 
 class PosteriorTableViewController: UITableViewController {
     
-    //INSTANCIA A LISTA
     var medicoes = [String]()
     var valores = [Float]()
+    var urls = [String]()
+    
     var lastSelectIndex = 0
     let resultadoTopo: UIButton = UIButton()
     
-    //FUNC - PREENCHE A LISTA
     func adicionaMedicoes(){
         medicoes.append("Largura Biauricular")
         medicoes.append("Largura Biasterica")
@@ -33,6 +33,13 @@ class PosteriorTableViewController: UITableViewController {
         valores.append(0)        
     }
     
+    func adicionaUrls(){
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +48,7 @@ class PosteriorTableViewController: UITableViewController {
         //PREENCHE LISTAS
         adicionaMedicoes()
         adicionaValoresIniciais()
+        adicionaUrls()
         
         resultadoTopo.setImage(UIImage(named: "nd32.png"), forState: UIControlState.Normal)
         resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
@@ -102,6 +110,7 @@ class PosteriorTableViewController: UITableViewController {
             let destinationVC = segue.destinationViewController as! DetalhesViewController
             
             destinationVC.mensagem = medicoes[sender!.tag]
+            destinationVC.url = urls[sender!.tag]
             
         }
     }

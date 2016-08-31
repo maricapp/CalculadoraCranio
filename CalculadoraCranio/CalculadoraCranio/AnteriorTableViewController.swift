@@ -10,14 +10,14 @@ import UIKit
 
 class AnteriorTableViewController: UITableViewController {
     
-    //INSTANCIA A LISTA
     var medicoes = [String]()
     var valores = [Float]()
+    var urls = [String]()
+    
     var lastSelectIndex = 0
     let resultadoTopo: UIButton = UIButton()
     
     
-    //FUNC - PREENCHE A LISTA
     func adicionaMedicoes(){
         medicoes.append("Largura Facial Superior")
         medicoes.append("Altura Facial Superior")
@@ -32,7 +32,6 @@ class AnteriorTableViewController: UITableViewController {
         medicoes.append("Largura Nasal")
         medicoes.append("Largura Bizigomatica")
         medicoes.append("Largura Zigomaxilar")
-        
     }
     
     func adicionaValoresIniciais(){
@@ -51,12 +50,28 @@ class AnteriorTableViewController: UITableViewController {
         valores.append(0)
     }
     
+    func adicionaUrls(){
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //PREENCHE LISTAS
         adicionaMedicoes()
         adicionaValoresIniciais()
+        adicionaUrls()
         
         let genero = CalcSingleton.obterGenero()
         atualizaIcone(genero)
@@ -110,6 +125,7 @@ class AnteriorTableViewController: UITableViewController {
             let destinationVC = segue.destinationViewController as! DetalhesViewController
             
             destinationVC.mensagem = medicoes[sender!.tag]
+            destinationVC.url = urls[sender!.tag]
             
         }
     }
