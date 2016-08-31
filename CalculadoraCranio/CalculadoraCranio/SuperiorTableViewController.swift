@@ -10,13 +10,15 @@ import UIKit
 
 class SuperiorTableViewController: UITableViewController {
     
-    //INSTANCIA A LISTA
     var medicoes = [String]()
     var valores = [Float]()
+    var urls = [String]()
+    
     var lastSelectIndex = 0
     let resultadoTopo: UIButton = UIButton()
+    @IBOutlet weak var lblResultado: UIBarButtonItem!
     
-    //FUNC - PREENCHE A LISTA
+    
     func adicionaMedicoes(){
         medicoes.append("Angulo da Concavidade Frontal")
         medicoes.append("Comprimento Máximo do Crânio")
@@ -27,8 +29,6 @@ class SuperiorTableViewController: UITableViewController {
         medicoes.append("Corda Frontal")
         medicoes.append("Corda Parietal")
     }
-    
-    @IBOutlet weak var lblResultado: UIBarButtonItem!
     
     func adicionaValoresIniciais(){
         valores.append(0)
@@ -41,21 +41,27 @@ class SuperiorTableViewController: UITableViewController {
         valores.append(0)
     }
     
+    func adicionaUrls(){
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+        urls.append("https://en.m.wikipedia.org/wiki/Parietal_bone")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lblResultado.title = ""
         
-        //PREENCHE LISTAS
         adicionaMedicoes()
         adicionaValoresIniciais()
+        adicionaUrls()
         
         resultadoTopo.setImage(UIImage(named: "nd32.png"), forState: UIControlState.Normal)
         resultadoTopo.frame = CGRectMake(0, 0, 32, 32)
         let barButton = UIBarButtonItem(customView: resultadoTopo)
         self.navigationItem.rightBarButtonItem = barButton
-        
-        
         
         let genero = CalcSingleton.obterGenero()
         atualizaIcone(genero)
@@ -98,17 +104,10 @@ class SuperiorTableViewController: UITableViewController {
             valores[posicao] = valor
         }
         
-        /*CalcSingleton.attribuirMedidasSuperior{ (varFromFunction:[Float]) in
-            print("varFromFunction")
-            print(varFromFunction)
-            return self.valores
-        }*/
-        
         CalcSingleton.attribuirMedidasSuperior(self.valores)
         let genero = CalcSingleton.obterGenero()
         
         atualizaIcone(genero)
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -117,7 +116,7 @@ class SuperiorTableViewController: UITableViewController {
             let destinationVC = segue.destinationViewController as! DetalhesViewController
             
             destinationVC.mensagem = medicoes[sender!.tag]
-            
+            destinationVC.url = urls[sender!.tag]
         }
     }
 
