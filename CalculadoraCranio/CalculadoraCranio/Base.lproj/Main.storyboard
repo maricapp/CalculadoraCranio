@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vK2-q7-K3L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vK2-q7-K3L">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -22,9 +22,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00.000" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CHn-Qe-cs9">
-                                            <rect key="frame" x="22" y="37" width="131" height="30"/>
+                                            <rect key="frame" x="22" y="37" width="111" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             <connections>
                                                 <action selector="sentEventsEditingDidEnd:" destination="hJ1-Wt-3f7" eventType="editingDidEnd" id="ts9-1P-wvH"/>
                                             </connections>
@@ -35,18 +35,18 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOA-Hx-kiZ">
+                                            <rect key="frame" x="290" y="46" width="22" height="22"/>
+                                            <connections>
+                                                <segue destination="dWT-X9-3FQ" kind="show" identifier="ShowDetalheSuperior" id="eA7-hb-a97"/>
+                                            </connections>
+                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlj-Cj-pIj">
-                                            <rect key="frame" x="161" y="46" width="42" height="21"/>
+                                            <rect key="frame" x="141" y="46" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOA-Hx-kiZ">
-                                            <rect key="frame" x="290" y="46" width="22" height="22"/>
-                                            <connections>
-                                                <segue destination="dWT-X9-3FQ" kind="show" id="eA7-hb-a97"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -107,9 +107,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00.000" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="S8o-lq-Cry">
-                                            <rect key="frame" x="22" y="37" width="131" height="30"/>
+                                            <rect key="frame" x="22" y="37" width="114" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             <connections>
                                                 <action selector="sentEventsEditingDidEnd:" destination="Ewo-5x-EAy" eventType="editingDidEnd" id="gKd-Q8-M0W"/>
                                             </connections>
@@ -120,18 +120,18 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwW-0y-zg7">
+                                            <rect key="frame" x="278" y="50" width="22" height="22"/>
+                                            <connections>
+                                                <segue destination="dWT-X9-3FQ" kind="show" identifier="ShowDetalheAnterior" id="Fu2-eT-fuF"/>
+                                            </connections>
+                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VI-QX-NQc">
-                                            <rect key="frame" x="161" y="46" width="29" height="21"/>
+                                            <rect key="frame" x="144" y="46" width="29" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwW-0y-zg7">
-                                            <rect key="frame" x="278" y="50" width="22" height="22"/>
-                                            <connections>
-                                                <segue destination="dWT-X9-3FQ" kind="show" id="Fu2-eT-fuF"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -255,8 +255,8 @@
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00.000" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="aRV-d5-NPl">
                                             <rect key="frame" x="8" y="37" width="115" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             <connections>
                                                 <outlet property="delegate" destination="7dj-Ja-9bT" id="LQC-RY-ETg"/>
                                             </connections>
@@ -270,12 +270,13 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qV-rH-Tya">
                                             <rect key="frame" x="290" y="46" width="22" height="22"/>
                                             <connections>
-                                                <segue destination="dWT-X9-3FQ" kind="show" id="Zaj-pn-o9s"/>
+                                                <segue destination="dWT-X9-3FQ" kind="show" identifier="ShowDetalheLateral" id="uMr-WZ-zj9"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="btnInformacao" destination="3qV-rH-Tya" id="cKi-R4-oSe"/>
                                     <outlet property="cellLabel" destination="w6r-kr-bUe" id="GVs-ia-zst"/>
                                     <outlet property="edtValor" destination="aRV-d5-NPl" id="LZT-nt-nzt"/>
                                 </connections>
@@ -318,7 +319,7 @@
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00.000" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iEl-LU-ZPl">
                                             <rect key="frame" x="16" y="37" width="106" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             <connections>
                                                 <action selector="sentEventsEditingDidEnd:" destination="U0T-QV-oux" eventType="editingDidEnd" id="1G7-4p-xhM"/>
                                             </connections>
@@ -332,7 +333,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHP-n6-rha">
                                             <rect key="frame" x="290" y="45" width="22" height="22"/>
                                             <connections>
-                                                <segue destination="dWT-X9-3FQ" kind="show" identifier="ShowDetalhes" id="UoR-0A-Mmc"/>
+                                                <segue destination="dWT-X9-3FQ" kind="show" identifier="ShowDetalhePosterior" id="UoR-0A-Mmc"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -403,6 +404,6 @@
         <image name="nd" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zaj-pn-o9s"/>
+        <segue reference="UoR-0A-Mmc"/>
     </inferredMetricsTieBreakers>
 </document>

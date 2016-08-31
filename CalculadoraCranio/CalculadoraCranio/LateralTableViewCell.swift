@@ -12,6 +12,7 @@ class LateralTableViewCell: UITableViewCell , UITextFieldDelegate {
 
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var edtValor: UITextField!
+    @IBOutlet weak var btnInformacao: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

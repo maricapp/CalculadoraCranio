@@ -74,7 +74,7 @@ class LateralTableViewController: UITableViewController {
         cell.cellLabel.text = medicoes[indexPath.item]
         cell.edtValor.tag = indexPath.row
         cell.edtValor.addTarget(self, action: "sentEventsEditingDidEnd:", forControlEvents: UIControlEvents.TouchUpInside)
-        
+        cell.btnInformacao.tag = indexPath.row
         return cell
     }
     
@@ -114,17 +114,18 @@ class LateralTableViewController: UITableViewController {
         
     }
     
-
-   // override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    //    if segue.identifier == "ShowDetalhe"
-     //   {
-      //      if let destinationVC = segue.destinationViewController as? DetalhesViewController{
-          //      let posicao = sender.tag
-           //     destinationVC.lblDetalhe.text =
-            //}
-      //  }
-    //}
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowDetalheLateral"
+        {
+            let destinationVC = segue.destinationViewController as! DetalhesViewController
+            
+            destinationVC.mensagem = medicoes[sender!.tag]
+            
+        }
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

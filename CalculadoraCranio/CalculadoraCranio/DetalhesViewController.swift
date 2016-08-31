@@ -9,12 +9,15 @@
 import UIKit
 
 class DetalhesViewController: UIViewController {
+    
     @IBOutlet weak var lblDetalhe: UILabel!
-
+    var mensagem:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        lblDetalhe.text = mensagem
     }
 
     override func didReceiveMemoryWarning() {

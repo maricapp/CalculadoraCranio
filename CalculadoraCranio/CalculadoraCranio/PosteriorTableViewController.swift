@@ -98,6 +98,16 @@ class PosteriorTableViewController: UITableViewController {
         atualizaIcone(genero)
         
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowDetalhePosterior"
+        {
+            let destinationVC = segue.destinationViewController as! DetalhesViewController
+            
+            destinationVC.mensagem = medicoes[sender!.tag]
+            
+        }
+    }
+
     
     func atualizaIcone(genero:String){
         if genero == "F" {
