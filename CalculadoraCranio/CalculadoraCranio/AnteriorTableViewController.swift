@@ -21,9 +21,32 @@ class AnteriorTableViewController: UITableViewController {
     func adicionaMedicoes(){
         medicoes.append("Largura Facial Superior")
         medicoes.append("Altura Facial Superior")
+        medicoes.append("Minima Largura Frontal")
+        medicoes.append("Largura Orbital")
+        medicoes.append("Altura Orbital")
+        medicoes.append("Largura Orbital Media")
+        medicoes.append("Largura Interorbital")
+        medicoes.append("Largura Biorbital")
+        medicoes.append("Largura Interorbital (Frontal)")
+        medicoes.append("Altura Nasal")
+        medicoes.append("Largura Nasal")
+        medicoes.append("Largura Bizigomatica")
+        medicoes.append("Largura Zigomaxilar")
+        
     }
     
     func adicionaValoresIniciais(){
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
         valores.append(0)
         valores.append(0)
     }

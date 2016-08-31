@@ -18,21 +18,19 @@ class PosteriorTableViewController: UITableViewController {
     
     //FUNC - PREENCHE A LISTA
     func adicionaMedicoes(){
-        medicoes.append("xxxxx")
-        
-        
-        
-        
+        medicoes.append("Largura Biauricular")
+        medicoes.append("Largura Biasterica")
+        medicoes.append("Corda Occiptal")
+        medicoes.append("Corda Lambda-Inion")
     }
     
     @IBOutlet weak var lblResultado: UIBarButtonItem!
     
     func adicionaValoresIniciais(){
         valores.append(0)
-        
-        
-        
-        
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)        
     }
     
     override func viewDidLoad() {
