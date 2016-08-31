@@ -25,23 +25,8 @@
                   symbolName = "CalculadoraCranio.ViewController.messageReceived.setter : Swift.String"
                   moduleName = "CalculadoraCranio"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Guest/Desktop/cranio/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
-                  timestampString = "494375888.925537"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "106">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CalculadoraCranio.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; CalculadoraCranio.ViewController"
-                  moduleName = "CalculadoraCranio"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Guest/Desktop/cranio/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
-                  timestampString = "494375888.925666"
+                  urlString = "file:///Users/Guest/Desktop/cr2/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
+                  timestampString = "494377275.535076"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -52,16 +37,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CalculadoraCranio.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CalculadoraCranio.ViewController&gt;"
+                  symbolName = "CalculadoraCranio.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; CalculadoraCranio.ViewController"
                   moduleName = "CalculadoraCranio"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Guest/Desktop/cranio/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
-                  timestampString = "494375888.925809"
+                  urlString = "file:///Users/Guest/Desktop/cr2/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
+                  timestampString = "494377275.535217"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "40">
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CalculadoraCranio.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CalculadoraCranio.ViewController&gt;"
+                  moduleName = "CalculadoraCranio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Guest/Desktop/cr2/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
+                  timestampString = "494377275.535325"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
