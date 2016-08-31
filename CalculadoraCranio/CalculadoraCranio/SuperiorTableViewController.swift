@@ -23,11 +23,17 @@ class SuperiorTableViewController: UITableViewController {
         medicoes.append("Largura Máxima do Crânio")
         medicoes.append("Altura Basion-Bregma")
         medicoes.append("Comprimento Basion-Nasion")
+        medicoes.append("Comprimento Basion-Prosthion")
+        medicoes.append("Corda Frontal")
+        medicoes.append("Corda Parietal")
     }
     
     @IBOutlet weak var lblResultado: UIBarButtonItem!
     
     func adicionaValoresIniciais(){
+        valores.append(0)
+        valores.append(0)
+        valores.append(0)
         valores.append(0)
         valores.append(0)
         valores.append(0)
