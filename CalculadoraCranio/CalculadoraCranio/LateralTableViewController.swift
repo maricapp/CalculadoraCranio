@@ -115,6 +115,15 @@ class LateralTableViewController: UITableViewController {
     }
     
 
+   // override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    //    if segue.identifier == "ShowDetalhe"
+     //   {
+      //      if let destinationVC = segue.destinationViewController as? DetalhesViewController{
+          //      let posicao = sender.tag
+           //     destinationVC.lblDetalhe.text =
+            //}
+      //  }
+    //}
 
     /*
     // Override to support conditional editing of the table view.
