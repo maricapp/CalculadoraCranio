@@ -11,6 +11,8 @@
 		9B4787E91D7674570060449E /* male32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4787E61D7674570060449E /* male32.png */; };
 		9B4787EA1D7674570060449E /* nd32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4787E71D7674570060449E /* nd32.png */; };
 		9B4787EE1D767F020060449E /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4787ED1D767F020060449E /* DetalhesViewController.swift */; };
+		AC0F5B681D779D4400A1CFB7 /* Old 3D Skull-64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F5B661D779D4400A1CFB7 /* Old 3D Skull-64x64.png */; };
+		AC0F5B691D779D4400A1CFB7 /* Old 3D Skull-256x256.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0F5B671D779D4400A1CFB7 /* Old 3D Skull-256x256.png */; };
 		AC164BF41D71023E00C119A2 /* AnteriorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC164BF31D71023E00C119A2 /* AnteriorTableViewController.swift */; };
 		AC164BF61D7102C800C119A2 /* AnteriorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC164BF51D7102C800C119A2 /* AnteriorTableViewCell.swift */; };
 		AC29FC7F1D6E7601001BF5C0 /* MedidasCranio.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29FC7E1D6E7601001BF5C0 /* MedidasCranio.swift */; };
@@ -51,6 +53,8 @@
 		9B4787E61D7674570060449E /* male32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = male32.png; path = Imagens/male32.png; sourceTree = "<group>"; };
 		9B4787E71D7674570060449E /* nd32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nd32.png; path = Imagens/nd32.png; sourceTree = "<group>"; };
 		9B4787ED1D767F020060449E /* DetalhesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
+		AC0F5B661D779D4400A1CFB7 /* Old 3D Skull-64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Old 3D Skull-64x64.png"; path = "Imagens/Old 3D Skull-64x64.png"; sourceTree = "<group>"; };
+		AC0F5B671D779D4400A1CFB7 /* Old 3D Skull-256x256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Old 3D Skull-256x256.png"; path = "Imagens/Old 3D Skull-256x256.png"; sourceTree = "<group>"; };
 		AC164BF31D71023E00C119A2 /* AnteriorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnteriorTableViewController.swift; sourceTree = "<group>"; };
 		AC164BF51D7102C800C119A2 /* AnteriorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnteriorTableViewCell.swift; sourceTree = "<group>"; };
 		AC29FC7E1D6E7601001BF5C0 /* MedidasCranio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedidasCranio.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 		ACDE9C231D72185A00D4C1A9 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				AC0F5B661D779D4400A1CFB7 /* Old 3D Skull-64x64.png */,
+				AC0F5B671D779D4400A1CFB7 /* Old 3D Skull-256x256.png */,
 				9B4787E51D7674570060449E /* female32.png */,
 				9B4787E61D7674570060449E /* male32.png */,
 				9B4787E71D7674570060449E /* nd32.png */,
@@ -287,8 +293,10 @@
 				ACFCF57E1D6E48EF00DA98D3 /* LaunchScreen.storyboard in Resources */,
 				9B4787E91D7674570060449E /* male32.png in Resources */,
 				9B4787EA1D7674570060449E /* nd32.png in Resources */,
+				AC0F5B691D779D4400A1CFB7 /* Old 3D Skull-256x256.png in Resources */,
 				ACFCF57B1D6E48EF00DA98D3 /* Assets.xcassets in Resources */,
 				9B4787E81D7674570060449E /* female32.png in Resources */,
+				AC0F5B681D779D4400A1CFB7 /* Old 3D Skull-64x64.png in Resources */,
 				ACFCF5791D6E48EF00DA98D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
