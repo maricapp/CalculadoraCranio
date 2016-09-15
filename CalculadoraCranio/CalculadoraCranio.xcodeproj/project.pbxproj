@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3030262F6588655BEB7C4886 /* Pods_CalculadoraCranioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FAE2728050F89D5C457B48 /* Pods_CalculadoraCranioTests.framework */; };
-		5DB28BACB5F61EE568863047 /* Pods_CalculadoraCranio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB3067078D556C802226D22 /* Pods_CalculadoraCranio.framework */; };
 		9B4787E81D7674570060449E /* female32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4787E51D7674570060449E /* female32.png */; };
 		9B4787E91D7674570060449E /* male32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4787E61D7674570060449E /* male32.png */; };
 		9B4787EA1D7674570060449E /* nd32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4787E71D7674570060449E /* nd32.png */; };
@@ -32,7 +30,6 @@
 		ACFCF5941D6E48EF00DA98D3 /* CalculadoraCranioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCF5931D6E48EF00DA98D3 /* CalculadoraCranioUITests.swift */; };
 		ACFCF5A21D6E557700DA98D3 /* SuperiorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCF5A11D6E557700DA98D3 /* SuperiorTableViewController.swift */; };
 		ACFCF5A41D6E5AC400DA98D3 /* SuperiorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFCF5A31D6E5AC400DA98D3 /* SuperiorTableViewCell.swift */; };
-		CAA44515D2AC7163565C7A54 /* Pods_CalculadoraCranioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA264BC0DECF515DF0D6780 /* Pods_CalculadoraCranioUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +51,9 @@
 
 /* Begin PBXFileReference section */
 		07BF49F2A2771FDF87FC3853 /* Pods-CalculadoraCranioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculadoraCranioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalculadoraCranioTests/Pods-CalculadoraCranioTests.release.xcconfig"; sourceTree = "<group>"; };
-		2DB3067078D556C802226D22 /* Pods_CalculadoraCranio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculadoraCranio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B5BB3D3CADA04CAC856D1C /* Pods-CalculadoraCranioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculadoraCranioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalculadoraCranioTests/Pods-CalculadoraCranioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AC33478F686BA1141E79519 /* Pods-CalculadoraCranioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculadoraCranioUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalculadoraCranioUITests/Pods-CalculadoraCranioUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		3EA264BC0DECF515DF0D6780 /* Pods_CalculadoraCranioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculadoraCranioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		641C52A891530B9C0657EF8E /* Pods-CalculadoraCranio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculadoraCranio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalculadoraCranio/Pods-CalculadoraCranio.debug.xcconfig"; sourceTree = "<group>"; };
-		76FAE2728050F89D5C457B48 /* Pods_CalculadoraCranioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculadoraCranioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2A0251347704665BA85097 /* Pods-CalculadoraCranioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculadoraCranioUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalculadoraCranioUITests/Pods-CalculadoraCranioUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9B4787E51D7674570060449E /* female32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = female32.png; path = Imagens/female32.png; sourceTree = "<group>"; };
 		9B4787E61D7674570060449E /* male32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = male32.png; path = Imagens/male32.png; sourceTree = "<group>"; };
@@ -98,7 +92,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB28BACB5F61EE568863047 /* Pods_CalculadoraCranio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3030262F6588655BEB7C4886 /* Pods_CalculadoraCranioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,23 +106,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAA44515D2AC7163565C7A54 /* Pods_CalculadoraCranioUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D76106D55B62151ADC53852 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2DB3067078D556C802226D22 /* Pods_CalculadoraCranio.framework */,
-				76FAE2728050F89D5C457B48 /* Pods_CalculadoraCranioTests.framework */,
-				3EA264BC0DECF515DF0D6780 /* Pods_CalculadoraCranioUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		AC3CBAEE1D74F4BF006C475D /* Abas */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +147,6 @@
 				ACFCF5921D6E48EF00DA98D3 /* CalculadoraCranioUITests */,
 				ACFCF5711D6E48EF00DA98D3 /* Products */,
 				B8FC16C71EFF0B85EAD971C2 /* Pods */,
-				1D76106D55B62151ADC53852 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
