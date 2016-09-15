@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class CalcSingleton {
     
@@ -17,7 +18,10 @@ class CalcSingleton {
     
     static let sharedInstance = CalcSingleton()
     
-    private init() { }
+    private init()
+    {
+
+    }
     
     class func attribuirMedidasSuperior(handler: [Float]) {
         medidasSuperior = handler
@@ -44,6 +48,15 @@ class CalcSingleton {
     }
     
     class func obterGenero() -> String {
+        
+        print("Aqui!!!!!")
+        let conditionRef = FIRDatabase.database().reference().child("rangeFem").child("begin")
+        conditionRef.observeEventType(.Value){(snap: FIRDataSnapshot) in
+            print(snap.value?.description)
+        }
+        print("FIIIIM!!!!!")
+        
+        
         
         var genero:String = ""
         
