@@ -91,32 +91,15 @@ class CalcSingleton {
         print("Soma: \(somaTotal)")
         print("")
         
+    
         
-        let request = NSMutableURLRequest(URL: NSURL(string: "https://craniowebapi.herokuapp.com/api/obtergenero")!)
-        request.HTTPMethod = "POST"
-        let postString = "valor=\(String(somaTotal))&area_nome=Angulo da Concavidade Frontal&cut_point_nome=br1"
+        let url = NSURL(string: "https://craniowebapi.herokuapp.com/api/obtertudo")
         
-        
-        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
-            guard error == nil && data != nil else {
-                print("error=\(error)")
-                return
-            }
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             
-            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {
-                
-                print("Status code \(httpStatus.statusCode)")
-                print("response = \(response)")
-            }
-            
-            print("************************")
-            print("responseString = \(self.parseJson(data!))")
-            print("")
-            
-            generoApi = parseJson(data!)
+            self.parseJson(data!)
         }
+        
         task.resume()
     
     
@@ -124,39 +107,72 @@ class CalcSingleton {
         
     }
     
-    class func parseJson(data: NSData) -> String
+    class func parseJson(data: NSData)
     {
-        var probFeminino:Float = 0.0
-        var probMasculino:Float = 0.0
-        
         do {
             let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
             
-            if let resultado = json["resultado"] as? [String: AnyObject] {
-                if let nameF = resultado["Feminino"] as? Float {
-                    probFeminino = nameF
-                    print("-----Feminino-----")
-                    print(nameF)
-                } else {
-                    print("*/*******name")
-                }
-                if let nameM = resultado["Masculino"] as? Float {
-                    probMasculino = nameM
-                    print("-------Masculino---")
-                    print(nameM)
+            if let resultado = json["resultado"] as? [[String: AnyObject]] {
+                
+                var linhaExcel = LinhaExcel()
+                
+                for medida in resultado {
+                    if let areaNome = medida["AreaNome"] as? String {
+                        linhaExcel.areaNome = areaNome
+                        print(areaNome)
+                    }
+                    if let cutPointNome = medida["CutPointNome"] as? String {
+                        linhaExcel.cutPointNome = cutPointNome
+                        print(cutPointNome)
+                    }
+                    if let operador = medida["Operador"] as? String {
+                        linhaExcel.operador = operador
+                        print(operador)
+                    }
+                    if let cutPointValor = medida["CutPointValor"] as? Float {
+                        linhaExcel.cutPointValor = cutPointValor
+                        print(cutPointValor)
+                    }
+                    if let feminino = medida["Feminino"] as? Float {
+                        linhaExcel.feminino = feminino
+                        print(feminino)
+                    }
+                    if let masculino = medida["Masculino"] as? Float {
+                        linhaExcel.masculino = masculino
+                        print(masculino)
+                    }
+                    if let ordenador = medida["Ordenador"] as? Int {
+                        linhaExcel.ordenador = ordenador
+                        print(ordenador)
+                    }
+                    print("linhaExcel")
+                    print(linhaExcel)
                 }
             }
         } catch {
             print("error serializing JSON: \(error)")
         }
-        
-        if (probFeminino > probMasculino) {
-            return "Feminino"
-        } else if (probFeminino < probMasculino) {
-            return "Masculino"
-        } else {
-            return "Empate"
-        }
+    }
+}
+
+class LinhaExcel  {
+    var areaNome:String = ""
+    var cutPointNome:String = ""
+    var operador:String = ""
+    var cutPointValor:Float = 0.0
+    var feminino:Float = 0.0
+    var masculino:Float = 0.0
+    var ordenador:Int = 0
+}
+
+class MedidaDaqui {
+    var nome:String = ""
+    var linhas = [LinhaExcel]()
+    
+    
+    
+    func adicionaLinhaExcel(LinhaExcel: linha){
+        linhas.append(linha)
     }
 
 }
