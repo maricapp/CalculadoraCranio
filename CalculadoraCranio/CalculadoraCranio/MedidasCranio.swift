@@ -49,14 +49,14 @@ class CalcSingleton {
     
     class func obterGenero() -> String {
         
+        var generoApi:String = ""
+        
         print("Aqui!!!!!")
         let conditionRef = FIRDatabase.database().reference().child("rangeFem").child("begin")
         conditionRef.observeEventType(.Value){(snap: FIRDataSnapshot) in
             print(snap.value?.description)
         }
         print("FIIIIM!!!!!")
-        
-        
         
         var genero:String = ""
         
@@ -76,19 +76,87 @@ class CalcSingleton {
         print("Soma do array sumPosterior: \(sumPosterior)")
         print("")
         
-        
         let somaTotal = sumSuperior + sumAnterior + sumLateral + sumPosterior
         
-        if  somaTotal < 50{
+        if somaTotal < 50 {
             genero = "-1"
-        } else if somaTotal > 100{
+        } else if somaTotal > 100 {
             genero = "M"
         } else {
             genero = "F"
         }
         print("Genero: \(genero)")
         print("")
-        return genero
+        
+        print("Soma: \(somaTotal)")
+        print("")
+        
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://craniowebapi.herokuapp.com/api/obtergenero")!)
+        request.HTTPMethod = "POST"
+        let postString = "valor=\(String(somaTotal))&area_nome=Angulo da Concavidade Frontal&cut_point_nome=br1"
+        
+        
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            guard error == nil && data != nil else {
+                print("error=\(error)")
+                return
+            }
+            
+            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {
+                
+                print("Status code \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            
+            print("************************")
+            print("responseString = \(self.parseJson(data!))")
+            print("")
+            
+            generoApi = parseJson(data!)
+        }
+        task.resume()
+    
+    
+        return generoApi
+        
+    }
+    
+    class func parseJson(data: NSData) -> String
+    {
+        var probFeminino:Float = 0.0
+        var probMasculino:Float = 0.0
+        
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+            
+            if let resultado = json["resultado"] as? [String: AnyObject] {
+                if let nameF = resultado["Feminino"] as? Float {
+                    probFeminino = nameF
+                    print("-----Feminino-----")
+                    print(nameF)
+                } else {
+                    print("*/*******name")
+                }
+                if let nameM = resultado["Masculino"] as? Float {
+                    probMasculino = nameM
+                    print("-------Masculino---")
+                    print(nameM)
+                }
+            }
+        } catch {
+            print("error serializing JSON: \(error)")
+        }
+        
+        if (probFeminino > probMasculino) {
+            return "Feminino"
+        } else if (probFeminino < probMasculino) {
+            return "Masculino"
+        } else {
+            return "Empate"
+        }
     }
 
 }
