@@ -92,13 +92,17 @@ class CalcSingleton {
         print("")
         
     
+        var tudo = TudoDoExcel()
         
         let url = NSURL(string: "https://craniowebapi.herokuapp.com/api/obtertudo")
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             
-            self.parseJson(data!)
+            tudo = self.parseJson(data!)
+            print(tudo)
         }
+        
+        tudo.obterGenero()
         
         task.resume()
     
@@ -107,52 +111,87 @@ class CalcSingleton {
         
     }
     
-    class func parseJson(data: NSData)
+    class func parseJson(data: NSData) -> TudoDoExcel
     {
+        let tudoDoExcel = TudoDoExcel()
+        
         do {
             let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
             
             if let resultado = json["resultado"] as? [[String: AnyObject]] {
                 
-                var linhaExcel = LinhaExcel()
                 
                 for medida in resultado {
+                    let linhaExcel = LinhaExcel()
                     if let areaNome = medida["AreaNome"] as? String {
                         linhaExcel.areaNome = areaNome
-                        print(areaNome)
+                        //print(areaNome)
                     }
                     if let cutPointNome = medida["CutPointNome"] as? String {
                         linhaExcel.cutPointNome = cutPointNome
-                        print(cutPointNome)
+                        //print(cutPointNome)
                     }
                     if let operador = medida["Operador"] as? String {
                         linhaExcel.operador = operador
-                        print(operador)
+                        //print(operador)
                     }
                     if let cutPointValor = medida["CutPointValor"] as? Float {
                         linhaExcel.cutPointValor = cutPointValor
-                        print(cutPointValor)
+                        //print(cutPointValor)
                     }
                     if let feminino = medida["Feminino"] as? Float {
                         linhaExcel.feminino = feminino
-                        print(feminino)
+                        //print(feminino)
                     }
                     if let masculino = medida["Masculino"] as? Float {
                         linhaExcel.masculino = masculino
-                        print(masculino)
+                        //print(masculino)
                     }
                     if let ordenador = medida["Ordenador"] as? Int {
                         linhaExcel.ordenador = ordenador
-                        print(ordenador)
+                        //print(ordenador)
                     }
+                    tudoDoExcel.adicionaLinhaExcel(linhaExcel)
                     print("linhaExcel")
                     print(linhaExcel)
                 }
+                print("********************medidaReferencia")
+                //print(tudoDoExcel.linhas[1864].areaNome)
+                //print(tudoDoExcel.linhas[1864].cutPointValor)
+                //print(tudoDoExcel.linhas[1866].areaNome)
+                //print(tudoDoExcel.linhas[1866].cutPointValor)
+                //print(medidaReferencia.linhas[1866].cutPointValor)
+                //print(medidaReferencia.linhas[1866].operador)
             }
         } catch {
             print("error serializing JSON: \(error)")
         }
+        print("teste")
+        return tudoDoExcel
     }
+}
+
+/*
+ cada objeto dessa classe faz referencia a um registro da tabela Area_CutPointNome do banco
+ */
+class TudoDoExcel {
+    
+    //var areaNome:String = ""
+    var linhas = [LinhaExcel]()
+    
+    func adicionaLinhaExcel(linha: LinhaExcel){
+        linhas.append(linha)
+    }
+    
+    func obterGenero(){
+        
+    
+    
+    }
+    
+    //func setAreaNome(nome: String){
+    //    areaNome = nome
+    //}
 }
 
 class LinhaExcel  {
@@ -163,17 +202,5 @@ class LinhaExcel  {
     var feminino:Float = 0.0
     var masculino:Float = 0.0
     var ordenador:Int = 0
-}
-
-class MedidaDaqui {
-    var nome:String = ""
-    var linhas = [LinhaExcel]()
-    
-    
-    
-    func adicionaLinhaExcel(LinhaExcel: linha){
-        linhas.append(linha)
-    }
-
 }
 
