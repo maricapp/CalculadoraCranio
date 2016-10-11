@@ -16,15 +16,36 @@ class CalcSingleton {
     static var medidasLateral = [Float]()
     static var medidasPosterior = [Float]()
     
+    static var tudoDoExcel = TudoDoExcel()
+    static var resultados = Resultados()
+    
     static let sharedInstance = CalcSingleton()
     
     private init()
     {
-
     }
     
-    class func attribuirMedidasSuperior(handler: [Float]) {
-        medidasSuperior = handler
+    class func buscar(){
+        
+        tudoDoExcel = TudoDoExcel()
+        
+        let url = NSURL(string: "https://craniowebapi.herokuapp.com/api/obtertudo")
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+            
+            tudoDoExcel = self.parseJson(data!)
+            print(tudoDoExcel)
+        }
+        
+        //tudo.obterGenero()
+        
+        task.resume()
+    }
+    
+    
+    class func attribuirMedidasSuperior(valorDigitado: Float, areaNome: String) {
+        tudoDoExcel.obterGeneroDaArea(valorDigitado, areaNome: areaNome, resultados: resultados)
+        
         print("Valor \(medidasSuperior) atribuido para medidasSuperior em calculadora singleton ")
         print("")
     }
@@ -45,6 +66,10 @@ class CalcSingleton {
         medidasPosterior = handler
         print("Valor \(medidasPosterior) atribuido para medidasPosterior em calculadora singleton ")
         print("")
+    }
+    
+    class func obterMediaSuperior() {
+        
     }
     
     class func obterGenero() -> String {
@@ -91,24 +116,9 @@ class CalcSingleton {
         print("Soma: \(somaTotal)")
         print("")
         
+        let mediaNova = resultados.calcularMedia()
     
-        var tudo = TudoDoExcel()
-        
-        let url = NSURL(string: "https://craniowebapi.herokuapp.com/api/obtertudo")
-        
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-            
-            tudo = self.parseJson(data!)
-            print(tudo)
-        }
-        
-        tudo.obterGenero()
-        
-        task.resume()
-    
-    
-        return generoApi
-        
+        return mediaNova
     }
     
     class func parseJson(data: NSData) -> TudoDoExcel
@@ -183,10 +193,30 @@ class TudoDoExcel {
         linhas.append(linha)
     }
     
-    func obterGenero(){
+    func obterGeneroDaArea(valorDigitado: Float, areaNome: String, resultados: Resultados){
+        //let results = linhas.lazy.filter { c in c.areaNome == areaNome && c.cutPointValor < valorDigitado }
+                // or instead of "c in", you can use $0:
+                //.map { ($0.someProperty, $0.otherProperty) }
         
-    
-    
+        var fem:Float = 0
+        var masc:Float = 0
+        
+        for linha in linhas {
+            if (linha.areaNome == areaNome && linha.cutPointValor == valorDigitado) {
+                fem = linha.feminino
+                masc = linha.masculino
+            }
+            
+        }
+        
+        resultados.addFem(fem)
+        resultados.addMasc(masc)
+        
+        print("****************    fem    ***********")
+        print(fem)
+        print("****************    masc    ***********")
+        print(masc)
+
     }
     
     //func setAreaNome(nome: String){
@@ -202,5 +232,37 @@ class LinhaExcel  {
     var feminino:Float = 0.0
     var masculino:Float = 0.0
     var ordenador:Int = 0
+}
+
+class Resultados {
+    var superiorFem = [Float]()
+    var superiorMasc = [Float]()
+    
+    var femFinal = Float()
+    var mascFinal = Float()
+    
+    func addFem (valor: Float){
+        superiorFem.append(valor)
+    }
+    
+    func addMasc (valor: Float){
+        superiorMasc.append(valor)
+    }
+    
+    func calcularMedia()-> String{
+        femFinal = superiorFem.reduce(0, combine: +)
+        mascFinal = superiorMasc.reduce(0, combine: +)
+        var genero: String
+        if (femFinal > mascFinal){
+            genero = "F"
+        } else if (mascFinal > femFinal){
+            genero = "M"
+        } else {
+            genero = "X"
+        }
+        
+        return genero
+        
+    }
 }
 

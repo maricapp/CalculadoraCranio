@@ -21,17 +21,15 @@ class SuperiorTableViewController: UITableViewController {
     
     func adicionaMedicoes(){
         medicoes.append("Angulo da Concavidade Frontal")
-        medicoes.append("Comprimento Máximo do Crânio")
-        medicoes.append("Largura Máxima do Crânio")
+        medicoes.append("Comprimento Maximo do Cranio")
+        medicoes.append("Largura Maxima do Cranio (Bieurio)")
         medicoes.append("Altura Basion-Bregma")
         medicoes.append("Comprimento Basion-Nasion")
         medicoes.append("Comprimento Basion-Prosthion")
         medicoes.append("Corda Frontal")
-        medicoes.append("Corda Parietal")
     }
     
     func adicionaValoresIniciais(){
-        valores.append(0)
         valores.append(0)
         valores.append(0)
         valores.append(0)
@@ -65,6 +63,8 @@ class SuperiorTableViewController: UITableViewController {
         
         let genero = CalcSingleton.obterGenero()
         atualizaIcone(genero)
+        
+        CalcSingleton.buscar()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -97,14 +97,15 @@ class SuperiorTableViewController: UITableViewController {
         
         let posicao = sender.tag
         let valorDigitado:String? = sender.text
+        var valor: Float = 0
         
         if (valorDigitado != nil)
         {
-            let valor : Float = NSString(string: valorDigitado!).floatValue
+            valor  = NSString(string: valorDigitado!).floatValue
             valores[posicao] = valor
         }
         
-        CalcSingleton.attribuirMedidasSuperior(self.valores)
+        CalcSingleton.attribuirMedidasSuperior(valor, areaNome: medicoes[posicao])
         let genero = CalcSingleton.obterGenero()
         
         atualizaIcone(genero)

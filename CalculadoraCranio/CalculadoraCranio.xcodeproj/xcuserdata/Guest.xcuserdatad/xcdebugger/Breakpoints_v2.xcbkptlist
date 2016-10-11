@@ -26,7 +26,7 @@
                   moduleName = "CalculadoraCranio"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Guest/Desktop/cr/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
-                  timestampString = "497835015.935482"
+                  timestampString = "497839917.155437"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -41,7 +41,7 @@
                   moduleName = "CalculadoraCranio"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Guest/Desktop/cr/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
-                  timestampString = "497835015.935763"
+                  timestampString = "497839917.155611"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -56,7 +56,7 @@
                   moduleName = "CalculadoraCranio"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Guest/Desktop/cr/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/ViewController.swift"
-                  timestampString = "497835015.935934"
+                  timestampString = "497839917.155774"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -105,11 +105,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculadoraCranio/MedidasCranio.swift"
-            timestampString = "497834917.278654"
+            timestampString = "497839646.218026"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "parseJson(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -121,11 +121,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculadoraCranio/MedidasCranio.swift"
-            timestampString = "497834917.278654"
+            timestampString = "497839646.218026"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "parseJson(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -137,60 +137,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculadoraCranio/MedidasCranio.swift"
-            timestampString = "497832456.129535"
+            timestampString = "497839646.218026"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "parseJson(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculadoraCranio/SuperiorTableViewController.swift"
+            timestampString = "497838134.341623"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
-            landmarkName = "obterGenero()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static CalculadoraCranio.CalcSingleton.obterGenero () -&gt; Swift.String"
-                  moduleName = "CalculadoraCranio"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Guest/Desktop/cr/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/MedidasCranio.swift"
-                  timestampString = "497832752.929458"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "6785">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static CalculadoraCranio.CalcSingleton.(obterGenero () -&gt; Swift.String).(closure #2)"
-                  moduleName = "CalculadoraCranio"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Guest/Desktop/cr/CalculadoraCranio/CalculadoraCranio/CalculadoraCranio/MedidasCranio.swift"
-                  timestampString = "497832752.929642"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "39">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CalculadoraCranio/MedidasCranio.swift"
-            timestampString = "497834917.278654"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "parseJson(_:)"
+            landmarkName = "sentEventsEditingDidEnd(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -201,12 +169,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculadoraCranio/MedidasCranio.swift"
-            timestampString = "497834852.405131"
+            timestampString = "497839646.218026"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "obterGenero()"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "obterGeneroDaArea(_:areaNome:resultados:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -217,11 +185,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CalculadoraCranio/MedidasCranio.swift"
-            timestampString = "497834857.989251"
+            timestampString = "497839646.218026"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "obterGeneroDaArea(_:areaNome:resultados:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculadoraCranio/MedidasCranio.swift"
+            timestampString = "497839646.218026"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "obterGeneroDaArea(_:areaNome:resultados:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CalculadoraCranio/MedidasCranio.swift"
+            timestampString = "497839627.866438"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "obterGenero()"
             landmarkType = "5">
          </BreakpointContent>
